@@ -13,18 +13,48 @@
       align-items: center;
       height: 100vh;
     }
-    form {
+    .card {
       background: white;
-      padding: 30px;
+      padding: 25px;
       border-radius: 15px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
       width: 90%;
-      max-width: 400px;
+      max-width: 420px;
+      text-align: center;
+    }
+    .book-img {
+      width: 160px;
+      margin: 0 auto 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .price-box {
+      margin-bottom: 15px;
+    }
+    .price-original {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 1.1em;
+    }
+    .price-discounted {
+      color: #e63946;
+      font-size: 1.5em;
+    }
+    .discount-badge {
+      background-color: #00aa88;
+      color: white;
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 10px;
+      font-size: 1em;
+      margin-top: 5px;
+    }
+    form {
+      margin-top: 20px;
     }
     input, button {
       font-family: 'Lalezar', cursive;
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin: 10px 0;
       padding: 10px;
       width: 100%;
@@ -49,14 +79,24 @@
 </head>
 <body>
 
-  <form id="registerForm">
-    <h2>پیش‌ثبت‌نام کتاب آمار و احتمال</h2>
-    <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <button type="submit">ثبت‌نام</button>
-    <div id="message">✅ ثبت‌نام شما با موفقیت انجام شد!</div>
-  </form>
+  <div class="card">
+    <img class="book-img" src="https://telketab.com/sites/default/files/products/book/%D8%B4%DB%8C%D9%85%DB%8C_%DB%8C%D8%A7%D8%B2%D8%AF%D9%87%D9%85_%D8%AA%D8%B3%D8%AA_%D8%AE%DB%8C%D9%84%DB%8C_%D8%B3%D8%A8%D8%B2%20%28Copy%29.jpg" alt="کتاب آمار و احتمال">
+
+    <div class="price-box">
+      <div class="price-original">۹۵۰٬۰۰۰ تومان</div>
+      <div class="price-discounted">۷۱۲٬۵۰۰ تومان</div>
+      <div class="discount-badge">٪۲۵ تخفیف</div>
+    </div>
+
+    <form id="registerForm">
+      <h2>پیش‌ثبت‌نام کتاب آمار و احتمال</h2>
+      <input type="text" name="name" placeholder="نام و نام خانوادگی" required>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <button type="submit">ثبت‌نام</button>
+      <div id="message">✅ ثبت‌نام شما با موفقیت انجام شد!</div>
+    </form>
+  </div>
 
   <script>
     document.getElementById('registerForm').addEventListener('submit', function(e) {
