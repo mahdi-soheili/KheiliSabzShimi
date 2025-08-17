@@ -50,6 +50,25 @@
       font-size: 1em;
       margin-top: 5px;
     }
+    .free-shipping {
+      margin-top: 8px;
+      display: inline-block;
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 12px;
+      font-size: 0.95em;
+      font-weight: bold;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      animation: pulse 1.5s infinite;
+    }
+    
+    /* انیمیشن ملایم برای جلب توجه */
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
     form {
       margin-top: 20px;
     }
@@ -117,8 +136,10 @@
 
     <div class="price-box">
       <div class="price-original">۹۵۰٬۰۰۰ تومان</div>
-      <div class="price-discounted">۷۱۲٬۵۰۰ تومان</div>
-      <div class="discount-badge">٪۲۵ تخفیف</div>
+      <div class="price-discounted">۷۲۲٬۰۰۰ تومان</div>
+      <div class="discount-badge">٪۲۴ تخفیف</div>
+      <div class="free-shipping">🚚 ارسال رایگان</div>
+
     </div>
 
     <form id="registerForm">
